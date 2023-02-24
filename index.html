@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Unit Converter</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header-section">
+      <h1 class="page-title">Find out your pet's human age!</h1>
+
+      <label for="age">Enter age</label>
+      <input type="number" name="age" id="age" />
+
+      <input type="radio" id="dog" name="pet" value="dog" />
+      <label for="dog">Dog</label>
+
+      <input type="radio" id="cat" name="pet" value="cat" />
+      <label for="cat">Cat</label>
+
+      <button class="btn btn-convert">Convert</button>
+    </header>
+    <main class="main-section">
+      <div class="result-container">
+        <h2 class="result-title">{Pet} age</h2>
+        <p class="result-content">
+          Your {age} year old is {age} in human years!
+        </p>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
