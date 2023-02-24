@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Colours */
+  --secondary: #6943FF;
+  --secondary-accent: #B295FF;
+  --btn-text: #3D3D3D;
+  --base: #fff;
+
+  /* Light theme */
+  --lt-light: #fff;
+  --lt-light-accent: #F4F4F4;
+  --lt-dark: #353535;
+  --lt-dark-accent: #5A537B;
+
+  /* Dark theme */
+  --dt-light: #fff;
+  --dt-light-accent: #CCC1FF;
+  --dt-dark: #273549;
+  --dt-dark-accent: #1F2937;
+
+  font-family: 'Inter', sans-serif;
+}
+
+/* CSS Reset by Josh Comeau */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
