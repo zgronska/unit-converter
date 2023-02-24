@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root {
+:root,
+:root.light {
   /* Colours */
   --secondary: #6943FF;
   --secondary-accent: #B295FF;
@@ -8,18 +9,21 @@
   --base: #fff;
 
   /* Light theme */
-  --lt-light: #fff;
-  --lt-light-accent: #F4F4F4;
-  --lt-dark: #353535;
-  --lt-dark-accent: #5A537B;
+  --fg: #353535;
+  --fg-accent: #5A537B;
+  --bg: #fff;
+  --bg-accent: #F4F4F4;
 
-  /* Dark theme */
-  --dt-light: #fff;
-  --dt-light-accent: #CCC1FF;
-  --dt-dark: #273549;
-  --dt-dark-accent: #1F2937;
 
   font-family: 'Inter', sans-serif;
+}
+
+:root.dark {
+  /* Dark theme */
+  --fg: #fff;
+  --fg-accent: #CCC1FF;
+  --bg: #273549;
+  --bg-accent: #1F2937;
 }
 
 /* CSS Reset by Josh Comeau */
@@ -70,4 +74,102 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Base styling */
+
+body {
+  padding: 2em;
+  display: grid;
+  place-content: center center;
+  background: var(--bg-accent);
+  color: var(--fg);
+  text-align: center;
+}
+
+.header-section,
+.main-section {
+  max-width: 35rem;
+  padding: 2.2rem 1.6rem;
+  border-radius: 1em;
+}
+
+
+/* Header */
+
+.header-section {
+  background: var(--secondary);
+  color: var(--base);
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 38px;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4em;
+}
+
+.age-input {
+  display: grid;
+  justify-content: center;
+  gap: 0.3em;
+  font-size: 0.8rem;
+  color: var(--secondary-accent);
+  margin-block: 2em;
+}
+
+#age {
+  background: transparent;
+  border: 2px solid var(--secondary-accent);
+  border-radius: 0.2em;
+  text-align: center;
+  color: var(--base);
+  font-size: 3.6rem;
+  font-weight: 800;
+  padding: 0.1em;
+  width: 2.5ch;
+  max-width: 100%;
+}
+
+#age::placeholder {
+  color: var(--secondary-accent);
+}
+
+.radio-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Main section */
+
+.main-section {
+  background: var(--bg-accent);
+}
+
+.result-container {
+  background: var(--bg);
+  font-size: 0.875rem;
+  padding: 1.3em 5em;
+  line-height: 20px;
+  border-radius: 1em;
+}
+
+.result-title {
+  color: var(--fg-accent);
+  margin-block: 0.4em;
+  font-weight: 600;
 }

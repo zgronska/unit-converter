@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <title>Unit Converter</title>
   </head>
   <body>
     <header class="header-section">
       <h1 class="page-title">Find out your pet's human age!</h1>
 
-      <label for="age">Enter age</label>
-      <input type="number" name="age" id="age" />
+      <div class="age-input">
+        <label for="age">Enter pet's age</label>
+        <input type="number" name="age" id="age" placeholder="5" min="1" />
+      </div>
 
-      <input type="radio" id="dog" name="pet" value="dog" />
-      <label for="dog">Dog</label>
-
-      <input type="radio" id="cat" name="pet" value="cat" />
-      <label for="cat">Cat</label>
+      <div class="radio-btns">
+        <div class="radio">
+          <input type="radio" id="dog" name="pet" value="dog" />
+          <label for="dog"
+            ><i class="fa-solid fa-dog" aria-label="dog"></i
+          ></label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="cat" name="pet" value="cat" />
+          <label for="cat"
+            ><i class="fa-solid fa-cat" aria-label="cat"></i
+          ></label>
+        </div>
+      </div>
 
       <button class="btn btn-convert">Convert</button>
     </header>
@@ -26,7 +43,7 @@
       <div class="result-container">
         <h2 class="result-title">{Pet} age</h2>
         <p class="result-content">
-          Your {age} year old is {age} in human years!
+          Your {age} year old {pet} is {age} in human years!
         </p>
       </div>
     </main>
