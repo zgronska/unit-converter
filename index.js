@@ -34,7 +34,16 @@ function convertAge(age, pet) {
       // Source: https://www.akc.org/expert-advice/health/how-to-calculate-dog-years-to-human-years/
       humanAge = Math.round(16 * Math.log(age) + 31);
     } else if (pet === "cat") {
-      //code
+      // Source: https://www.ajdesigner.com/fl_cat_age/cat_age.php
+      if (age === 1) {
+        humanAge = 15; // equivalent age of a 15-year-old person
+      } else if (age === 2) {
+        humanAge = 24; // equivalent age of a 24-year-old person
+      } else if (age <= 14) {
+        humanAge = 24 + (age - 2) * 4; // age at a rate of four human years between 2 and 14 years
+      } else {
+        humanAge = 24 + 12 * 4 + (age - 14) * 2; // age at a rate of two human years after 14 years
+      }
     }
   }
   console.log(humanAge);
@@ -45,6 +54,7 @@ function convertAge(age, pet) {
 function renderResult(age) {
   resultElTitle.textContent = `${petType === "dog" ? "Dog" : "Cat"} age`;
   resultElContent.textContent = `Your ${petAge} year old ${petType} is ${age} in human years!`;
+  resultEl.style.display = "block";
 }
 
 // Dark mode toggle

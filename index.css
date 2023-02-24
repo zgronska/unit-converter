@@ -91,6 +91,7 @@ body {
   padding: 2em;
   display: grid;
   place-content: center center;
+  justify-items: center;
   background: var(--bg-accent);
   color: var(--fg);
   text-align: center;
@@ -102,7 +103,9 @@ body {
   max-width: 35rem;
   padding: 2.2rem 1.6rem;
   border-radius: 1em;
+  width: fit-content;
 }
+
 
 /* Dark mode toggle */
 
@@ -116,6 +119,8 @@ body {
   border-radius: 50%;
   --fa-display: grid;
   place-content: center center;
+  top: 5%;
+  left: 5%;
 }
 
 .rotate {
@@ -246,6 +251,7 @@ input[type="radio"]:checked::before {
   padding: 1.3em 5em;
   line-height: 20px;
   border-radius: 1em;
+  display: none;
 }
 
 .result-title {
