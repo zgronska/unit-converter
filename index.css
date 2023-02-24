@@ -94,7 +94,7 @@ body {
   background: var(--bg-accent);
   color: var(--fg);
   text-align: center;
-  transition: background .2s linear;
+  transition: background-color .2s linear;
 }
 
 .header-section,

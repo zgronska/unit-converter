@@ -16,16 +16,22 @@
   <body>
     <i class="fa-solid fa-moon btn-theme rotate"></i>
     <header class="header-section">
-      <h1 class="page-title">Find out your pet's human age!</h1>
+      <h1 class="page-title">Discover your pet's human age!</h1>
 
       <div class="age-input">
         <label for="age">Enter pet's age</label>
-        <input type="number" name="age" id="age" placeholder="5" min="1" />
+        <input
+          required
+          type="number"
+          name="age"
+          id="age"
+          placeholder="5"
+          min="1" />
       </div>
 
       <div class="radio-btns">
         <div class="radio">
-          <input type="radio" id="dog" name="pet" value="dog" />
+          <input checked type="radio" id="dog" name="pet" value="dog" />
           <label for="dog"
             ><i class="fa-solid fa-dog" aria-label="dog"></i
           ></label>
