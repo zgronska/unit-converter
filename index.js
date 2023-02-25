@@ -42,9 +42,11 @@ function convertAge(age, pet) {
       } else if (age <= 14) {
         humanAge = 24 + (age - 2) * 4; // age at a rate of four human years between 2 and 14 years
       } else {
-        humanAge = 24 + 12 * 4 + (age - 14) * 2; // age at a rate of two human years after 14 years
+        humanAge = 72 + (age - 14) * 2; // age at a rate of two human years after 14 years
       }
     }
+  } else {
+    return;
   }
   console.log(humanAge);
   // Call rendering function
