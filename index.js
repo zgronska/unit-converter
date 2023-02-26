@@ -7,6 +7,7 @@ const convertBtn = document.querySelector(".btn-convert");
 const resultEl = document.querySelector(".result-container");
 const resultElTitle = document.querySelector(".result-title");
 const resultElContent = document.querySelector(".result-content");
+const petGif = document.querySelector(".pet-gif");
 
 // Declare variables of user's pet
 let petAge;
@@ -29,10 +30,10 @@ function convertAge(age, pet) {
   // Check if the age is a number above 0
   if (age > 0) {
     // For ages between 1 and 6 the conversion is the same for both cats and dogs
-    if (age === 1) {
-      humanAge = 15; // equivalent age of a 15-year-old person
-    } else if (age === 2) {
-      humanAge = 24; // equivalent age of a 24-year-old person
+    if (age <= 1) {
+      humanAge = age * 15; // equivalent age of a 15-year-old person
+    } else if (age <= 2) {
+      humanAge = 15 + (age - 1) * 9; // equivalent age of a 24-year-old person
     } else if (age <= 5) {
       humanAge = 24 + (age - 2) * 4; // age at a rate of four human years
     } else if (age > 5) {
@@ -59,8 +60,9 @@ function convertAge(age, pet) {
 }
 
 function renderResult(age) {
-  resultElTitle.textContent = `${petType === "dog" ? "Dog" : "Cat"} age`;
-  resultElContent.textContent = `Your ${petAge} year old ${petType} is ${age} in human years!`;
+  resultElTitle.innerHTML = `<i class="fa-solid fa-paw"></i> Your ${petType} is... <i class="fa-solid fa-paw"></i>`;
+  petGif.setAttribute("src", `./${petType}.gif`);
+  resultElContent.innerHTML = `Your <span class="accent">${petAge}</span> year old ${petType} is <span class="accent">${age}</span> in human years!`;
   resultEl.style.display = "block";
 }
 

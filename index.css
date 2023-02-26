@@ -259,3 +259,14 @@ input[type="radio"]:checked::before {
   margin-block: 0.4em;
   font-weight: 600;
 }
+
+.pet-gif {
+  border-radius: 1em;
+  margin: 1em auto;
+  max-height: 12em;
+}
+
+.accent {
+  color: var(--fg-accent);
+  font-weight: 600;
+}
